@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+
+main()
+{
+    cout<<"Bienvenido al menú de opciones \n";
+    cout<<"Selecciona una de las opciones para saber su ubicación geográfica \n"<<endl;
+    int opcion;
+    
+    do
+    {
+        cout<<"1. Agregar un munincipio \n";
+        cout<<"2. Editar la información de un municipio. \n";
+        cout<<"3. Eliminar un municipio. \n";
+        cout<<"4. Buscar un departamento de un municipio. \n";
+        cout<<"5. Consultar si existen departamentos con un ingreso superior a un valor. \n";
+        cout<<"6. Consultar si existen departamentos con una población igual a un valor dado. \n";
+        cout<<"7. Visualizar el total del censo por departamento. \n";
+        cout<<"8. Visualizar el total del censo a nivel nacional. \n";
+        cout<<"9. Salir \n";
+        
+        cin>>opcion;
+        switch(opcion)
+        {
+            case 1:
+            {
+               cout<<"opcion 1 \n";
+             
+            }break;
+            case 2:
+            {
+                cout<<"opcion 2";
+            }break;
+            case 3:
+            {
+                cout<<"opcion 3";
+            }break;
+            case 4:
+            {
+                cout<<"opcion 4";
+            }break;
+            case 5:
+            {
+                cout<<"opcion 5";
+            }break;
+            case 6:
+            {
+                cout<<"opcion 6";
+            }break;
+            case 7:
+            {
+                cout<<"opcion 7";
+            }break;
+            case 8:
+            {
+                cout<<"opcion 8";
+            }break;
+            case 9:
+            {
+                cout<<"salir \n";
+            }
+            default:
+            {
+                cout<<"intentalo denuevo \n";
+            }
+        }
+        
+     
+    }while(opcion != 9);
+
+cout<<"gracias por si selección";
