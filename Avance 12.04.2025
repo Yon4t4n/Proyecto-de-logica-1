@@ -1,0 +1,61 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Municipio {
+    string nombre;
+    int poblaciontotal;
+    int cantidadhombres;
+
+    void ingresarDatos() {
+        cout << "Datos del Municipio\n";
+        cout << "Nombre del municipio: ";
+        cin >> nombre;
+
+        cout << "Población total: ";
+        cin >> poblaciontotal;
+
+        cout << "Cantidad de hombres: ";
+        cin >> cantidadhombres;
+    }
+
+    void mostrarDatos() {
+        cout << "Datos del Municipio\n";
+        cout << "Nombre: " << nombre << endl;
+        cout << "Población total: " << poblaciontotal << endl;
+        cout << "Cantidad de hombres: " << cantidadhombres << endl;
+        cout << "Cantidad de mujeres: " << (poblaciontotal - cantidadhombres) << endl;
+    }
+};
+
+struct Departamento {
+    string nombre;
+    float temperaturamedia;
+    Municipio municipio;
+
+    void ingresarDatos() {
+        cout << "Ingreso de datos del Departamento\n";
+        cout << "Nombre del departamento: ";
+        cin >> nombre;
+
+        cout << "Temperatura media: ";
+        cin >> temperaturamedia;
+
+        municipio.ingresarDatos();
+    }
+
+    void mostrarDatos() {
+        cout << "\n=== Datos del Departamento ===\n";
+        cout << "Nombre del departamento: " << nombre << endl;
+        cout << "Temperatura media: " << temperaturamedia << "°C" << endl;
+        municipio.mostrarDatos();
+    }
+};
+
+int main() {
+    Departamento departamento;
+    departamento.ingresarDatos();
+    departamento.mostrarDatos();
+
+    return 0;
+}
